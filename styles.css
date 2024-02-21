@@ -51,19 +51,15 @@ body {
     50% { transform: scale(1.1); } /* Increase scale for more noticeable effect */
     100% { transform: scale(1); }
 }
-.alert-box {
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.dynamic-alert-box {
+    position: absolute; /* Change position to absolute */
     padding: 20px;
     background-color: rgba(255, 0, 0, 0.8); /* Red background with transparency */
     color: #fff;
     border-radius: 10px;
-    opacity: 0; /* Initially hidden */
+    opacity: 1; /* Initially visible */
     transition: opacity 0.5s; /* Fade-in/out transition */
-  }
-  
+}
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
