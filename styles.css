@@ -1,0 +1,72 @@
+
+body {
+    background-color: #c9c9c9c9; /* Light gray background */
+  }
+
+.outer-circle {
+    width: 80vw; /* 80% of the viewport width */
+    height: 80vw; /* 80% of the viewport width */
+    max-width: 400px; /* Maximum width to maintain good proportions */
+    max-height: 400px; /* Maximum height to maintain good proportions */
+    background: 
+      radial-gradient(circle at 30% 30%, #454545 20%, #434343 80%), /* Highlight */
+      radial-gradient(circle at 70% 70%, #000000 20%, #444444 80%); /* Shadow */
+    border-radius: 50%; /* Makes it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed position for centering */
+    top: 50%; /* Center horizontally */
+    left: 50%; /* Center vertically */
+    transform: translate(-50%, -50%); /* Centering trick */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adding shadow for depth */
+    animation: buttonPress 0.3s ease; /* Apply the buttonPress animation */
+}
+  
+
+
+  .inner-button { /*red button*/
+    padding: 150px; /* Increased padding for bigger button */
+    font-size: 150px; /* Increased font size for bigger button */
+    background: radial-gradient(circle at 50% 50%, #ff5555, #cc0000); /* Radial gradient for a realistic button */
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Makes it a circle */
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adding shadow for depth */
+  }
+
+  .inner-button:hover {
+    background: radial-gradient(circle at 50% 50%, #ff3333, #aa0000); /* Darker red on hover */
+  }
+
+  .inner-button.pressed {
+    animation: buttonPress 0.3s ease; /* Apply the buttonPress animation */
+  }
+  
+
+  /* Animation for button press down effect */
+@keyframes buttonPress {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); } /* Increase scale for more noticeable effect */
+    100% { transform: scale(1); }
+}
+.alert-box {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(255, 0, 0, 0.8); /* Red background with transparency */
+    color: #fff;
+    border-radius: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s; /* Fade-in/out transition */
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  
